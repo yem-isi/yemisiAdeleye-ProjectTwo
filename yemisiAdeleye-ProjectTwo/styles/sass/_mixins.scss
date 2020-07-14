@@ -1,0 +1,67 @@
+@mixin nav() {
+    nav {
+       
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+   
+            li {
+                list-style: none;
+                display: flex;
+                justify-content: space-evenly;
+   
+                a {
+                    color: $white;
+                    font-family: $bodyFont;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-decoration: none;
+                    margin: 5px;
+            
+                }
+            }
+        }
+    }
+}
+
+@mixin headerTwo($colorValue) {
+    color: $colorValue;
+    font-family: "IM Fell English", serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+@mixin headerThree($colorValue) {
+    color: $colorValue;
+    font-family: "IM Fell English", serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+@mixin button($buttonValue) {
+    width: $buttonValue;
+    color: $darkBlue;
+    background-color: $yellow;
+    font-family: "IM Fell English", serif;
+    font-size: 4.16rem;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: none;
+    padding: 5px;
+}
+
+@mixin footer() {
+        text-align: center;
+        color: $darkBlue;
+        background-color: $yellow;
+        font-family: $bodyFont;
+        font-size: 2rem;  
+        a {
+            text-decoration: none;
+    
+            &:hover {
+                color: $lightBlue;
+            }
+        }
+}

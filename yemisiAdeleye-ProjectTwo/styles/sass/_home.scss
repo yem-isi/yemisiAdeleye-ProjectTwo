@@ -1,0 +1,288 @@
+.home {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.home header {
+
+     background-image: url(../assets/home-header.jpg);
+     background-repeat: no-repeat;
+     background-size: cover; 
+     position: relative;
+ 
+     h1 {
+         font-family: $headerFont;
+         font-size: 7.9rem;
+         color: $yellow;
+         text-transform: uppercase;
+     }
+   
+ }
+
+ .headerImg {
+     width: 50%;
+     position: absolute;
+     top: 300px;
+ }
+ 
+ .home nav {
+    @include nav();
+ }
+ 
+ a:hover {
+     text-decoration: underline 3px;
+     text-decoration-color: $yellow;
+ }
+ 
+ .home button {
+    @include button(100px);
+}
+
+button a {
+    text-decoration: none;
+}
+button a:hover {
+    color: $lightBlue;
+}
+
+.section2 h3,
+.section3 h3,
+.section5 h3 {
+
+  font-family: $headerFont;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+ .section1 p,
+ .section2 p,
+ .section3 p,
+ .section5 p {
+     font-family: $bodyFont;
+     font-size: 2rem;
+ }
+
+ .section1 {
+     background-color: $lightBlue;
+     display: flex;
+     flex-wrap: wrap;
+
+     h2 {
+        @include headerTwo($darkBlue);
+     }
+
+}
+ 
+ .section1 p {
+        color: #000000;
+ }
+
+
+ .section1Icon {
+    font-size: 4.5rem;
+    color: $darkBlue;
+    background: $yellow;
+    border-radius: 50%;
+    width: 10%;
+    text-align: center;
+}
+
+.newDestinations,
+.community,
+.blog,
+.getinTouch {
+    width: 50%;
+
+}
+
+ .section2 {
+
+    background-color: $darkBlue;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 100px 0px;
+    margin: 20px 0px;
+
+     h3 { 
+         @include headerThree($white);
+
+     }
+     
+ }
+
+ .ourPrograms,
+ .newLocations {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ 
+ .section2 p {
+     color: $white; 
+ }
+
+ .leftImg,
+ .rightImg {
+     position: absolute;
+     width: 50%;
+ }
+
+ .leftImgText {
+    width: 50%;
+ }
+ .leftImg {
+     box-shadow: -10px -10px 1px $yellow;
+     top: -10px;
+     left: -5px;
+ }
+ 
+ .rightImgText {
+     width: 50%;
+ }
+ .rightImg {
+     box-shadow: 10px 10px 1px $yellow;
+ }
+
+
+ .section3 {
+     text-align: center;
+     margin: 100px 0px;
+
+     h3 {
+
+        color: $darkBlue;
+     }
+ }
+
+
+ .section3 p {
+    color: #000000;
+ }
+ 
+ .section5 {
+     background-color: $lightBlue;
+     display: flex;
+     padding: 70px 0px;
+
+     h3 {
+         
+        @include h3($darkBlue);
+        
+     }
+ }
+
+ p {
+    color: #000000;
+}
+
+.winTrip {
+    margin: 40px;
+}
+.winTripImg {
+    padding-left: 40px;
+    box-shadow: -10px -10px 1px $yellow;
+}
+
+ 
+ .section6 {
+     display: flex;
+     background-color: $darkBlue;
+     padding: 50px 0px; 
+     img {
+        width: 30%;
+        padding: 0px 20px;
+     }
+ } 
+ 
+
+ .home footer {
+
+    @include footer();
+   
+ }
+
+@media (max-width: 940px) {
+    .newDestinations,
+    .community,
+    .blog,
+    .getinTouch {
+    width: 40%;
+    }
+
+    .leftImg,
+    .rightImg {
+        width: 30%;
+    }
+
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .leftImg,
+    .rightImg {
+        width: 300px;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    button {
+        font-size: 3rem;
+    }
+    .home h1 {
+        font-size: 6rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+    .section1 {
+        display: block;
+        text-align: center;
+    }
+    .headerImg {
+        width: 20%;
+    }
+    .newDestinations,
+    .community,
+    .blog,
+    .getinTouch {
+        width: 100%;
+    }
+    .home h2 {
+        font-size: 2rem;
+    }
+
+    .section2 {
+        display: block;
+        text-align: center; 
+    }
+
+    .ourPrograms,
+    .newLocations {
+        width: 100%;
+    }
+
+    .section5 {
+        display: block;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .section1,
+    .section2,
+    .section5,
+    .section6 {
+        display: block;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+}

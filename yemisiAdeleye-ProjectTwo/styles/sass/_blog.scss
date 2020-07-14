@@ -1,0 +1,143 @@
+.blog .wrapper {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.blog nav {
+    @include nav();
+}
+
+.blog header {
+    background-image: url(../assets/blog-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        color: $white;
+        font-family: $headerFont;
+        text-transform: uppercase;
+    }
+}
+
+.sectionAside {
+    display: flex; 
+    flex-wrap: wrap;
+}
+.blog aside {
+    background-color: $lightBlue;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 50px;
+
+    h3 {
+      @include header3($yellow);
+    }
+}
+
+aside p,
+aside ul {
+    font-family: $bodyFont;
+    color: $white;
+    font-size: 2rem;
+}
+
+.asideText {
+    background-color: $darkBlue;
+    padding: 10px;
+}
+
+.asideImg {
+    position: relative;
+}
+
+.blog section {
+    background-color: $lightBlue;
+    width: 60%;
+    h2,
+    h3 {
+        @include header3($darkBlue);
+    }
+}
+
+section h3 {
+    font-size: 4.5rem;
+}
+
+section h2 {
+    font-size: 4rem;
+}
+
+section p {
+    font-family: $bodyFont;
+    color: #000000;
+    font-size: 2rem;
+}
+
+section span {
+    color: $darkBlue;
+    font-family: $bodyFont;
+    font-weight: 700;
+}
+
+.div1 {
+    border: 5px $yellow;
+}
+
+.blog form {
+    border: 1px $yellow;
+}
+
+.blog textarea {
+    resize: none;
+}
+
+.blog button {
+    color: $yellow;
+    background-color: $darkBlue;
+    font-family: $headerFont;
+    font-size: 4.16rem;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: none;
+    padding: 5px;
+}
+
+
+.blog footer {
+    @include footer();
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .sectionAside,
+    .blogAside {
+        display: block;
+        text-align: center;
+    }
+    .blog form {
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+
+    p {
+        font-size: 1.5rem;
+    }
+
+}

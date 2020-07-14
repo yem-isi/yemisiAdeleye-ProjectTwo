@@ -1,0 +1,73 @@
+.contact .wrapper {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact nav {
+    @include nav();
+}
+
+.contact header {
+    min-height: 100vh;
+    background-image: url(../assets/contact-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.contactInfo {
+    font-size: 2rem;
+    color: $darkBlue;
+    font-family: $bodyFont;
+}
+
+.contact .form {
+    background: $darkBlue;
+    color: $white;
+    font-size: 2rem;
+    font-family: $bodyFont;
+    box-shadow: -10px -10px 1px $yellow;
+}
+
+input[type="text"]::placeholder {
+    font-family: $bodyFont;
+    font-size: 2rem;
+    color: $white;
+}
+
+textarea {
+    resize: none;
+  }
+
+.contact button {
+    width: 100%;
+}
+
+.contact button:hover {
+    color: $lightBlue;
+}
+
+footer {
+ @include footer();  
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    .contactInfo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+}
